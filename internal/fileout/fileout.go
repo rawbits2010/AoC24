@@ -106,6 +106,7 @@ func (fo *FileOut) UpdateParameter(name, value string) error {
 
 	scanner := bufio.NewScanner(fo.currFile)
 
+	// TODO: this is not done at all!!!
 	foundParam := false
 	for scanner.Scan() {
 		line := scanner.Text()
@@ -121,10 +122,11 @@ func (fo *FileOut) UpdateParameter(name, value string) error {
 
 		// remove old
 		if tokens[1] == name {
-			fo.currFile.tru
+			fo.currFile.Truncate(0)
 		}
 	}
-
+	_ = foundParam
+	return nil
 }
 
 // DumpToFile makes sure the file exists and writes 'text' into it,

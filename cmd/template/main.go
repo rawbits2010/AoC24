@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/rawbits2010/AoC23/internal/inputhandler"
+	"github.com/rawbits2010/AoC24/internal/inputhandler"
 )
 
 func main() {
